@@ -1,0 +1,33 @@
+[2019-01-02T11:29:30.101+0000] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=101 _ThreadName=Thread-8] [timeMillis: 1546428570101] [levelValue: 800] [[
+  Started bundle: file:/D:/workspace/glassfish5/glassfish5/glassfish/domains/domain1/autodeploy/bundles/jersey-client-test-1.0.0-SNAPSHOT.jar]]
+
+[2019-01-02T11:29:30.107+0000] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=101 _ThreadName=Thread-8] [timeMillis: 1546428570107] [levelValue: 800] [[
+  Running the tyrus client to retrieve: wss://echo.websocket.org]]
+
+[2019-01-02T11:29:30.206+0000] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=101 _ThreadName=Thread-9] [timeMillis: 1546428570206] [levelValue: 1000] [[
+  Oops: javax.websocket.DeploymentException: org.glassfish.tyrus.container.grizzly.client.GrizzlyClientContainer not found by org.glassfish.tyrus.core [268]
+]]
+
+[2019-01-02T11:29:30.206+0000] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=101 _ThreadName=Thread-9] [timeMillis: 1546428570206] [levelValue: 1000] [[
+  java.lang.RuntimeException: javax.websocket.DeploymentException: org.glassfish.tyrus.container.grizzly.client.GrizzlyClientContainer not found by org.glassfish.tyrus.core [268]
+
+	at org.glassfish.tyrus.client.ClientManager.<init>(ClientManager.java:277)
+	at org.glassfish.tyrus.client.ClientManager.createClient(ClientManager.java:243)
+	at org.glassfish.tyrus.client.ClientManager.createClient(ClientManager.java:219)
+	at pjs102.gf5demos.tyrus.client.Activator.runTest(Activator.java:50)
+	at pjs102.gf5demos.tyrus.client.Activator.start(Activator.java:39)
+	at org.apache.felix.framework.util.SecureAction.startActivator(SecureAction.java:697)
+	at org.apache.felix.framework.Felix.activateBundle(Felix.java:2240)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2146)
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:998)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundle(DirectoryWatcher.java:1260)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundles(DirectoryWatcher.java:1233)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startAllBundles(DirectoryWatcher.java:1221)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.doProcess(DirectoryWatcher.java:515)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.process(DirectoryWatcher.java:365)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.run(DirectoryWatcher.java:316)
+Caused by: javax.websocket.DeploymentException: org.glassfish.tyrus.container.grizzly.client.GrizzlyClientContainer not found by org.glassfish.tyrus.core [268]
+
+	at org.glassfish.tyrus.core.ErrorCollector.composeComprehensiveException(ErrorCollector.java:84)
+	... 15 more
+]]

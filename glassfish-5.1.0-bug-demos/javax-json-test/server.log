@@ -1,0 +1,32 @@
+[2019-01-02T11:29:35.292+0000] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=101 _ThreadName=Thread-8] [timeMillis: 1546428575292] [levelValue: 800] [[
+  Error while starting bundle: file:/D:/workspace/glassfish5/glassfish5/glassfish/domains/domain1/autodeploy/bundles/javax-json-test-1.0.0-SNAPSHOT.jar: org.osgi.framework.BundleException: Activator start error in bundle javax-json-test [311].]]
+
+[2019-01-02T11:29:35.292+0000] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=101 _ThreadName=Thread-8] [timeMillis: 1546428575292] [levelValue: 800] [[
+  org.osgi.framework.BundleException: Activator start error in bundle javax-json-test [311].
+	at org.apache.felix.framework.Felix.activateBundle(Felix.java:2290)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2146)
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:998)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundle(DirectoryWatcher.java:1260)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundles(DirectoryWatcher.java:1233)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startAllBundles(DirectoryWatcher.java:1221)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.doProcess(DirectoryWatcher.java:515)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.process(DirectoryWatcher.java:365)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.run(DirectoryWatcher.java:316)
+Caused by: javax.json.JsonException: Provider org.glassfish.json.JsonProviderImpl not found
+	at javax.json.spi.JsonProvider.provider(JsonProvider.java:99)
+	at javax.json.Json.createReader(Json.java:225)
+	at pjs102.gf5demos.javaxjson.test.EmployeeJSONReader.read(EmployeeJSONReader.java:17)
+	at pjs102.gf5demos.javaxjson.test.Activator.start(Activator.java:23)
+	at org.apache.felix.framework.util.SecureAction.startActivator(SecureAction.java:697)
+	at org.apache.felix.framework.Felix.activateBundle(Felix.java:2240)
+	... 8 more
+Caused by: java.lang.ClassNotFoundException: org.glassfish.json.JsonProviderImpl not found by javax.json-api [144]
+	at org.apache.felix.framework.BundleWiringImpl.findClassOrResourceByDelegation(BundleWiringImpl.java:1639)
+	at org.apache.felix.framework.BundleWiringImpl.access$200(BundleWiringImpl.java:80)
+	at org.apache.felix.framework.BundleWiringImpl$BundleClassLoader.loadClass(BundleWiringImpl.java:2053)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at javax.json.spi.JsonProvider.provider(JsonProvider.java:96)
+	... 13 more
+]]

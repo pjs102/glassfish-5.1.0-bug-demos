@@ -1,0 +1,35 @@
+[2019-01-02T11:29:30.034+0000] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=101 _ThreadName=Thread-8] [timeMillis: 1546428570034] [levelValue: 800] [[
+  Running the jersey client to retrieve: https://jsonplaceholder.typicode.com/todos/1]]
+
+[2019-01-02T11:29:30.099+0000] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=101 _ThreadName=Thread-9] [timeMillis: 1546428570099] [levelValue: 1000] [[
+  Oops: InjectionManagerFactory not found.]]
+
+[2019-01-02T11:29:30.100+0000] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=101 _ThreadName=Thread-9] [timeMillis: 1546428570100] [levelValue: 1000] [[
+  java.lang.IllegalStateException: InjectionManagerFactory not found.
+	at org.glassfish.jersey.internal.inject.Injections.lambda$lookupInjectionManagerFactory$0(Injections.java:98)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.glassfish.jersey.internal.inject.Injections.lookupInjectionManagerFactory(Injections.java:98)
+	at org.glassfish.jersey.internal.inject.Injections.createInjectionManager(Injections.java:68)
+	at org.glassfish.jersey.client.ClientConfig$State.initRuntime(ClientConfig.java:432)
+	at org.glassfish.jersey.internal.util.collection.Values$LazyValueImpl.get(Values.java:341)
+	at org.glassfish.jersey.client.ClientConfig.getRuntime(ClientConfig.java:826)
+	at org.glassfish.jersey.client.ClientRequest.getConfiguration(ClientRequest.java:285)
+	at org.glassfish.jersey.client.JerseyInvocation.validateHttpMethodAndEntity(JerseyInvocation.java:143)
+	at org.glassfish.jersey.client.JerseyInvocation.<init>(JerseyInvocation.java:112)
+	at org.glassfish.jersey.client.JerseyInvocation.<init>(JerseyInvocation.java:108)
+	at org.glassfish.jersey.client.JerseyInvocation.<init>(JerseyInvocation.java:99)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:419)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.get(JerseyInvocation.java:319)
+	at pjs102.gf5demos.jersey.client.Activator.runTest(Activator.java:28)
+	at pjs102.gf5demos.jersey.client.Activator.start(Activator.java:15)
+	at org.apache.felix.framework.util.SecureAction.startActivator(SecureAction.java:697)
+	at org.apache.felix.framework.Felix.activateBundle(Felix.java:2240)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2146)
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:998)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundle(DirectoryWatcher.java:1260)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundles(DirectoryWatcher.java:1233)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startAllBundles(DirectoryWatcher.java:1221)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.doProcess(DirectoryWatcher.java:515)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.process(DirectoryWatcher.java:365)
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.run(DirectoryWatcher.java:316)
+]]
