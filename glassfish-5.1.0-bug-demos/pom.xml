@@ -43,6 +43,7 @@
 		</plugins>
 	</build>
 	<modules>
+		<module>javax-json-test</module>
 		<module>jersey-client-test</module>
 		<module>tyrus-client-test</module>
 	</modules>
